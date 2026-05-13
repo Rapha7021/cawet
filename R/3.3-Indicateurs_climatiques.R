@@ -53,7 +53,7 @@ run_script3_3 <- function(
       if (met_path != "Meteo.csv") {
         Meteo_maille1 <- read.csv2(paste0(Path_scen, '/Meteo/', met_path))
         if (Scenario$Climat_data_source[Scen_i] == "Safran") {
-          Meteo_maille1 <- Meteo_maille1 %>% mutate(across(3:28, as.character))
+          Meteo_maille1 <- Meteo_maille1 %>% mutate(across(3:ncol(Meteo_maille1), as.character))
         }
         if (Scenario$Climat_data_source[Scen_i] == "Drias") {
           Meteo_maille1 <- Meteo_maille1 %>% mutate(across(2:12, as.character))
