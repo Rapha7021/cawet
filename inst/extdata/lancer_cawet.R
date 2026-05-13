@@ -6,6 +6,10 @@
 dossier_travail  <- "/home/shiff/Téléchargements"   # dossier où seront copiés les données et résultats
 nom_ordonnanceur <- "Ordonnanceur_exemple.xlsx" # nom de ton fichier ordonnanceur
 
+# Valeurs saisies via lancer_CAWET.bat (prioritaires sur les lignes ci-dessus)
+if (nzchar(Sys.getenv("CAWET_DOSSIER_TRAVAIL")))  dossier_travail  <- Sys.getenv("CAWET_DOSSIER_TRAVAIL")
+if (nzchar(Sys.getenv("CAWET_NOM_ORDONNANCEUR"))) nom_ordonnanceur <- Sys.getenv("CAWET_NOM_ORDONNANCEUR")
+
 # ============================================================
 #  NE PAS MODIFIER EN DESSOUS
 # ============================================================
