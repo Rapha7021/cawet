@@ -3,8 +3,8 @@
 #  Modifier uniquement les lignes ci-dessous
 # ============================================================
 
-dossier_travail  <- "C:/MonProjet/CAWET"   # dossier où seront copiés les données et résultats
-nom_ordonnanceur <- "mon_ordonnanceur.xlsx" # nom de ton fichier ordonnanceur
+dossier_travail  <- "/home/shiff/Téléchargements"   # dossier où seront copiés les données et résultats
+nom_ordonnanceur <- "Ordonnanceur_exemple.xlsx" # nom de ton fichier ordonnanceur
 
 # ============================================================
 #  NE PAS MODIFIER EN DESSOUS
@@ -20,7 +20,7 @@ if (!requireNamespace("CAWET", quietly = TRUE)) {
 }
 
 # -- Création du dossier de travail (seulement la première fois) --
-if (!dir.exists(dossier_travail)) {
+if (!dir.exists(file.path(dossier_travail, "Ordonnanceur"))) {
   library(CAWET)
   setup_CAWET(dossier_travail)
   message("Dossier de travail créé : ", dossier_travail)
