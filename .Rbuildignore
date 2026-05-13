@@ -1,0 +1,11 @@
+^LICENSE\.md$
+^\.gitlab-ci\.yml$
+^ci$
+^pkgdown$
+^public$
+^\.git$
+^\.Rproj\.user$
+^.*\.Rproj$
+^dev$
+^README\.Rmd$
+^data-raw$

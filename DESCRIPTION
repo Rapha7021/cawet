@@ -1,0 +1,53 @@
+Package: CAWET
+Title: Calculation of Agricultural Water Needs and Evapotranspiration
+Version: 1.1.0.9000
+Authors@R: c(
+    person("Pierre", "Rouault", , "CAWET@chaire-eacc.fr", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0002-9473-7232")),
+    person("David", "Dorchies", , "david.dorchies@inrae.fr", role = "aut",
+           comment = c(ORCID = "0000-0002-6595-7984")),
+    person("Claire", "Richert", role = "aut",
+           comment = c(ORCID = "0000-0001-7456-6689"))
+  )
+Description: An R tool for calculating theoretical irrigation water consumption
+    over a territory. CAWET extracts, models and analyzes agro-climatic data
+    to produce maps, graphics and comparative outputs across different scenarios.
+    The workflow includes data extraction from online databases (via RADIS),
+    modeling (primarily using CropWat), and visualization of results through
+    graphics and maps.
+License: AGPL (>= 3)
+URL: https://inrae.r-universe.dev/CAWET,
+     https://umr-g-eau.pages-forge.inrae.fr/cawet
+BugReports: https://forge.inrae.fr/umr-g-eau/cawet/-/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends: R (>= 4.1.0)
+Imports:
+    dplyr,
+    sf,
+    ggplot2,
+    stringr,
+    data.table,
+    scales,
+    tidyr,
+    lubridate,
+    cli,
+    stats,
+    utils,
+    openxlsx,
+    glue,
+    RADIS,
+    CropWat,
+    slider,
+    tools,
+    terra
+Additional_repositories: https://inrae.r-universe.dev
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    withr
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+LazyData: true

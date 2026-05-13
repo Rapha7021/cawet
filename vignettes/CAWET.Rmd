@@ -1,0 +1,125 @@
+---
+title: "CAWET – Tutoriel d'utilisation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CAWET – Tutoriel d'utilisation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE,
+  echo = FALSE
+)
+```
+
+```{r setup}
+library(CAWET)
+```
+
+CAWET (**Calculation of Agricultural Water needs and EvapoTranspiration**) est un outil de calcul des consommations théoriques d’eau d’irrigation sur un territoire, basé sur différents scripts R.
+Il permet d’extraire, modéliser et analyser des données agro-climatiques pour produire cartes, graphiques et sorties comparatives selon plusieurs scénarios.
+
+---
+
+## 🚀 Prérequis
+
+Installer CAWET 😉 ([voir les instructions d'installation](../index.html#installation))
+
+---
+
+## 🔧 Fonctionnement général de l’outil
+
+Le workflow CAWET s'articule en trois étapes principales via des fonctions R :
+
+1. **Extraction** des données (bases en ligne via *RADIS*)
+2. **Modélisation** (CropWat principalement)
+3. **Traitement & visualisation** des résultats (graphiques + cartes)
+
+📄 L'executeur central est : **`CAWET.bat`**
+
+Il est présent sur le dossier téléchargé par l'installateur disponible via ce lien : https://forge.inrae.fr/umr-g-eau/cawet/-/raw/main/dev/install.bat?inline=false.
+
+Une fois lancé, une fenêtre s'ouvre, il faut alors y référencer un ordonnanceur au format conforme avec l'usage de CAWET.
+
+Lors de la sélection de l’ordonnanceur, un dossier `Runs/...` est automatiquement créé pour stocker toutes les sorties.
+
+---
+
+## 📁 L’ordonnanceur – Structure et champs à renseigner
+
+Le fichier **Excel (.xlsx)** ou **.csv** contient une ligne par scénario et des colonnes décrivant les paramètres.
+Ci-dessous les champs clés à configurer :
+
+| Colonne | Description | Options / format |
+|---|---|---|
+| **Scenario** | Nom unique du scénario (sans `- _ / \`) | Texte libre |
+| **Plots_RADIS_RPG** | Source du parcellaire | `Yes`, `External_plot_map`, `Non_existant_plots` |
+| **RPG_complete** | Si Plot_RADIS_RPG est 'Yes', utilisation complémentaire du RPG complété | `Yes`, `No` |
+| **Shp_link** | Chemin vers fichier shp/gpkg/csv/xlsx | Selon type de parcellaire |
+| **First_year_simulation** | Année début simulation | ≥2015 recommandé |
+| **Last_year_simulation** | Année fin simulation | ≤2022 pour RPG natif |
+| **Colname_idpoly / idplots / codecultureRPG** | Colonnes identifiants | Nom colonne ou `NA` |
+| **Climat_data_unique_or_network** | Type données météo | `Unique` / `Network` |
+| **Climat_data_source** | Source maillée | `Safran` / `Drias` / `Forced_otherclimaticdata` |
+| **Climat_link_Drias** | Fichier paramètres Drias | `NA` ou chemin |
+| **Code_param_Drias** | Ligne du paramétrage choisi | Nom ligne |
+| **RCP_scenario** | Scénario climatique | ex : `4.5` |
+| **Climat_link_fixe** | Données météo fixes | Chemin ou `NA` |
+| **Colname_Date / ET0 / Pluie** | Colonnes météo | Nom ou `NA` |
+| **Sol_fixed_RADIS** | Source RU sol | `Yes_BDGSF` / `Yes_Infoetsol` / `No` |
+| **Soil_information_link** | Tableau RU personnalisé | Chemin ou `NA` |
+| **Sol_carte_sup_RU_link_to_doss** | Dossier .tif RU additionnel | Chemin (sans `\` final) |
+| **Sol_RU_unit** | Unité RU | `mm`, `cm`, `dm`, `m` |
+| **Pratique_irrigation_table_percentages** | Tableau % irrigation | Chemin |
+| **Pratique_irrigation_param** | Paramètres systèmes irrigation | Chemin |
+| **Interdiction_usage_eau** | Dossier d'interdictions | Chemin |
+| **Model** | Modèle simulé | `CropWat` *(Aquacrop & Optirrig en cours)* |
+| **Model_param_crop** | Paramètres cultures modèle | Chemin |
+| **Model_link_RPG_croparam** | Table correspondance RPG ↔ cultures | Chemin |
+| **Territorial_validation_link** | Valeur référence eau m³ | Chemin ou `NA` |
+| **Cultural_validation_link** | Référence conso eau mm | Chemin ou `NA` |
+| **Wanted_output** | Sorties souhaitées | Chemin |
+| **Subgrid_size_km** | Taille maille visualisation | `...0.4, 0.5, 0.8, 1, 1.6,2,4,8` |
+| **number_of_sliding_days_for_visualisation** | Moyenne glissante | Défaut `10` |
+
+---
+
+## 🧪 Exécution type dans R
+
+```r
+source("CAWET.R")
+# Lancer successivement les blocs décrits dans le script
+```
+
+Une fenêtre demandera ensuite le fichier **ordonnanceur**.
+Les résultats seront générés dans `Runs/<horodatage>/`.
+
+---
+
+## 📊 Sorties générées
+
+- Besoins en eau théoriques par culture / territoire
+- Cartes & graphiques individuels par scénario
+- Comparatif multi-scénarios
+- Indicateurs climatiques
+- Données exportables pour analyse complémentaire
+
+---
+
+## 📎 Notes utiles
+
+- Ordonnanceur **obligatoirement .xlsx ou .csv**
+- Les colonnes avec `NA` désactivent le paramètre correspondant
+- Le modèle par défaut est CropWat, d’autres seront intégrés progressivement
+
+---
+
+## 🏁 Contact / Contributions
+
+N’hésitez pas à proposer des améliorations ou rapports d’usage de l’outil.
+CAWET est conçu comme un environnement évolutif 🌱
+Mail : cawet@chaire-eacc.fr

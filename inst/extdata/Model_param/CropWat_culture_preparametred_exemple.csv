@@ -1,0 +1,164 @@
+crop;name;Lini;Ldev;Lmid;Lend;Kini;Kmax;Kend;Zini;Zend;p_ini;p_mid;p_end;Yini;Ydev;Ymid;Yend;Ytot;h;sowing_date;Source
+FAO-ALFALFA0;ALFALFA-perennial;150;30;150;35;0,4;0,95;0,9;1,2;1,2;0,55;0,55;0,55;1;1;1;1;1;0,7;NA;CW_preparametred
+FAO-ALFALFA1;ALFALFA 1 year;10;30;150;35;0,4;0,95;0,4;1,2;1,2;0,55;0,55;0,55;1;1;1;1;1;0,7;NA;CW_preparametred
+FAO-ARTICHOK;Artichoke;40;40;250;30;0,5;1;0,95;0,25;0,9;0,4;0,45;0,45;0,6;0,6;0,4;1;0,8;0,7;NA;CW_preparametred
+FAO-BANANA1;BANANA 1st year;90;165;45;30;0,5;1,1;1;0,3;0,9;0,55;0,45;0,45;1;1;1;1;1;3;NA;CW_preparametred
+FAO-BANANA2;BANANA 2nd year;60;60;75;45;1;1,2;1,1;0,9;0,9;0,55;0,45;0,45;1;1;1;1;1;4;NA;CW_preparametred
+FAO-BARLEY;Barley;15;25;50;30;0,3;1,15;0,25;0,3;1,1;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;NA;CW_preparametred
+FAO-BEANS-DR;Dry beans;20;30;40;20;0,4;1,15;0,35;0,3;0,9;0,45;0,45;0,6;0,2;0,6;1;0,2;1,15;0,4;NA;CW_preparametred
+FAO-BEANS-GR;Green beans;20;30;30;10;0,5;1,05;0,9;0,3;0,7;0,45;0,45;0,6;0,2;1,1;0,75;0,4;1,15;0,4;NA;CW_preparametred
+FAO-CABBAGE;CABBAGE Crucifers;40;60;50;15;0,7;1,05;0,95;0,25;0,5;0,45;0,45;0,45;0,2;0,4;0,45;0,6;0,95;0,4;NA;CW_preparametred
+FAO-CITRUS;CITRUS 70% ca bare;60;90;120;95;0,7;0,65;0,7;1,4;1,4;0,5;0,5;0,5;1;1;1;1;1;4;NA;CW_preparametred
+FAO-COTTON;COTTON;30;50;60;55;0,35;1,2;0,6;0,3;1,4;0,65;0,65;0,9;0,2;0,5;0,5;0,25;0,85;1,3;NA;CW_preparametred
+FAO-DATEPALM;Date palms;140;30;150;45;0,9;0,95;0,95;2;2;0,5;0,5;0,5;0,8;0,8;0,8;0,8;0,8;8;NA;CW_preparametred
+FAO-GRAINS;Small Grains;25;35;65;40;0,3;1,1;0,3;0,3;1,2;0,5;0,6;0,7;0,4;0,6;1,25;0,8;1;1;NA;CW_preparametred
+FAO-GRAPES-T;table grapes;150;50;125;40;0,3;0,85;0,45;1,5;1,5;0,35;0,35;0,35;0,2;0,7;0,85;0,4;0,85;1,5;NA;CW_preparametred
+FAO-GRAPES-W;Wine grapes;150;50;125;40;0,3;0,7;0,45;1,5;1,5;0,45;0,45;0,45;0,2;0,7;0,85;0,4;0,85;1,8;NA;CW_preparametred
+FAO-GRASS-C;Turf grass cool cl;150;40;130;45;0,9;0,95;0,95;0,5;0,5;0,4;0,4;0,4;1;1;1;1;1;0,1;NA;CW_preparametred
+FAO-GRASS-W;Turf grass warm;150;40;130;45;0,8;0,85;0,85;0,5;0,5;0,5;0,5;0,5;1;1;1;1;1;0,1;NA;CW_preparametred
+FAO-GRONDNUT;Groudnut;25;35;45;25;0,4;1,15;0,6;0,3;0,8;0,45;0,45;0,5;0,2;0,8;0,6;0,2;0,7;0,4;NA;CW_preparametred
+FAO-MAIZE;MAIZE  (Grain);20;35;40;30;0,3;1,2;0,35;0,3;1;0,55;0,55;0,8;0,4;0,4;1,3;0,5;1,25;2;NA;CW_preparametred
+FAO-MANGO;MANGO;90;90;90;95;0,9;1,1;0,9;2;2;0,6;0,6;0,6;0,8;0,8;0,8;0,8;0,8;6;NA;CW_preparametred
+FAO-MILLET;MILLET;15;25;40;25;0,3;1;0,3;0,3;1,2;0,5;0,6;0,7;0,4;0,6;1,25;0,8;1;1,5;NA;CW_preparametred
+FAO-PASTURE;Pasture perennial;140;60;120;45;0,85;0,95;0,85;0,8;0,8;0,5;0,5;0,5;0,8;0,8;0,8;0,8;0,8;0,2;NA;CW_preparametred
+FAO-PEPPER;Sweet Peppers;30;35;40;20;0,6;1,05;0,9;0,25;0,8;0,2;0,3;0,5;1,4;0,6;1,2;0,6;1,1;0,7;NA;CW_preparametred
+FAO-POTATO;Potato;25;30;45;30;0,5;1,15;0,75;0,3;0,6;0,25;0,3;0,5;0,45;0,8;0,8;0,3;1,1;0,6;NA;CW_preparametred
+FAO-PULSES;Pulses;20;30;40;20;0,4;1,15;0,35;0,3;1;0,6;0,6;0,8;0,4;0,6;0,8;0,6;0,8;0,4;NA;CW_preparametred
+FAO-SORGHUM;SORGHUM (Grain);20;35;40;30;0,3;1;0,55;0,3;1,4;0,6;0,5;0,8;0,2;0,4;0,55;0,2;0,9;1,5;NA;CW_preparametred
+FAO-SOYBEAN;Soybean;15;15;40;15;0,4;1,15;0,5;0,3;1;0,5;0,6;0,9;0,4;0,8;1;0,4;0,85;0,6;NA;CW_preparametred
+FAO-SUGARBET;Sugarbeet;25;35;50;50;0,35;1,2;0,7;0,3;1;0,5;0,6;0,6;0,5;0,8;1,2;1;1,1;0,7;NA;CW_preparametred
+FAO-SUGARCAN;Sugarcane (Ratoon);30;60;180;95;0,4;1,25;0,75;1,5;1,5;0,65;0,65;0,65;0,5;0,75;1,2;0,1;1,2;3;NA;CW_preparametred
+FAO-SUNFLOWR;Sunflower;25;35;45;25;0,35;1,15;0,35;0,3;1,3;0,45;0,5;0,8;0,4;0,6;0,8;0,8;0,95;2;NA;CW_preparametred
+FAO-SW-MELON;Sweet Melon;25;35;40;20;0,5;1,05;0,75;0,3;1;0,4;0,4;0,5;0,5;0,6;1,1;0,8;1,05;0,4;NA;CW_preparametred
+FAO-TOBACCO;Tobacco;20;30;30;30;0,5;1,15;0,8;0,25;0,8;0,4;0,5;0,65;0,4;1;1;0,5;0,9;1,2;NA;CW_preparametred
+FAO-TOMATO;Tomato;30;40;45;30;0,6;1,15;0,8;0,25;1;0,3;0,4;0,5;0,5;0,6;1,1;0,8;1,05;0,6;NA;CW_preparametred
+FAO-VEGETABL;Small Vegetables;20;30;30;15;0,7;1,05;0,95;0,25;0,6;0,3;0,45;0,5;0,8;0,4;1,2;1;1;0,3;NA;CW_preparametred
+FAO-W-WHEAT;Winter Wheat  f.f.;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;NA;CW_preparametred
+FAO-W-WHEATF;Winter Wheat;160;75;75;25;0,4;1,15;0,25;0,3;1,5;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;NA;CW_preparametred
+FAO-WHEAT;Spring Wheat;30;30;40;30;0,3;1,15;0,3;0,3;1,2;0,55;0,55;0,8;0,4;0,6;0,8;0,4;1,15;1;NA;CW_preparametred
+KURN-COTTON;COTTON;30;50;55;45;0,35;1,2;0,6;0,3;1,4;0,65;0,65;0,9;0,2;0,5;0,5;0,25;0,85;1,3;NA;CW_preparametred
+KURN-GRONDNUT KHARIF;Groudnut Kharif;20;30;25;35;0,4;1,15;0,6;0,3;0,8;0,45;0,45;0,5;0,2;0,8;0,6;0,2;0,7;0,4;NA;CW_preparametred
+KURN-GRONDNUT RABI;Groudnut Rabi;20;30;35;25;0,4;1,15;0,6;0,3;0,8;0,45;0,45;0,5;0,2;0,8;0,6;0,2;0,7;0,4;NA;CW_preparametred
+KURN-SORGHUM-HYV;SORGHUM (Grain);27;35;35;30;0,5;1,15;0,6;0,3;1;0,5;0,5;0,8;0,6;0,6;1,2;0,8;1;NA;NA;CW_preparametred
+KURN-SORGHUM;SORGHUM (Grain);20;40;30;30;0,3;1;0,55;0,3;1,4;0,6;0,5;0,8;0,2;0,4;0,55;0,2;0,9;1,5;NA;CW_preparametred
+KURN-SUGARCAN;Sugarcane (Ratoon);30;60;180;95;0,4;1,25;0,75;1,5;1,5;0,65;0,65;0,65;0,5;0,75;1,2;0,1;1,2;3;NA;CW_preparametred
+SB2023-colza;colza (AqYield crop code);15;165;61;37;0,45;1,1;0,45;0,3;1,25;0,8;0,7;0,7;NA;NA;NA;NA;NA;NA;09_01;CW_preparametred
+SB2023-CP;CP (AqYield crop code);145;60;27;22;0,5;1;0,5;0,3;1,65;0,8;0,6;0,65;NA;NA;NA;NA;NA;NA;10_16;CW_preparametred
+SB2023-maisP;maisP (AqYield crop code);47;34;32;47;0,55;1,1;0,05;0,3;1,35;0,75;0,55;0,75;NA;NA;NA;NA;NA;NA;04_17;CW_preparametred
+SB2023-maisT;maisT (AqYield crop code);52;38;35;48;0,55;1,1;0,15;0,3;1,35;0,75;0,55;0,75;NA;NA;NA;NA;NA;NA;04_08;CW_preparametred
+SB2023-maisEnsil;maisEnsil (AqYield crop code);38;37;35;32;0,5;1,1;0,3;0,3;1,35;0,75;0,55;0,7;NA;NA;NA;NA;NA;NA;04_26;CW_preparametred
+SB2023-pois;pois (AqYield crop code);40;40;28;15;0,5;0,95;0,3;0,3;0,8;0,6;0,45;0,55;NA;NA;NA;NA;NA;NA;02_25;CW_preparametred
+SB2023-prairie;prairie (AqYield crop code);75;29;26;18;0,5;0,95;0,3;0,3;1;0,8;0,65;0,75;NA;NA;NA;NA;NA;NA;03_02;CW_preparametred
+SB2023-semence;semence (AqYield crop code);40;30;36;47;0,55;1,05;0,05;0,3;1,35;0,7;0,6;0,75;NA;NA;NA;NA;NA;NA;05_05;CW_preparametred
+SB2023-soja;soja (AqYield crop code);47;50;38;36;0,5;1,15;0,35;0,3;0,95;0,7;0,5;0,7;NA;NA;NA;NA;NA;NA;04_04;CW_preparametred
+SB2023-tour;tour (AqYield crop code);32;49;32;29;0,55;0,9;0,3;0,3;1,15;0,45;0,45;0,45;NA;NA;NA;NA;NA;NA;04_08;CW_preparametred
+SB2023-vergers;vergers (AqYield crop code);115;47;45;42;0,55;0,95;0,15;1;1,5;0,7;0,55;0,7;NA;NA;NA;NA;NA;NA;01_01;CW_preparametred
+SB2023-vignes;vignes (AqYield crop code);110;52;45;42;0,5;0,95;0,15;1;1,5;0,7;0,5;0,65;NA;NA;NA;NA;NA;NA;01_01;CW_preparametred
+Ail_test;Ail_test;90;60;30;20;0,5;0,9;0,4;0,05;0,2;0,3;0,5;0,3;NA;NA;NA;NA;NA;NA;02_01;https://draaf.auvergne-rhone-alpes.agriculture.gouv.fr/IMG/pdf/livret-ail-ca_occitanie_cle8dd691.pdf
+olivier_test;olivier_test;90;60;60;60;0,76;0,63;0,77;1;1,5;0,7;0,55;0,7;NA;NA;NA;NA;NA;NA;01_01;Fernandez_etal.2006 https://link.springer.com/article/10.1007/s11104-006-0045-9#citeas
+FAO-WHEAT_dateL;Spring Wheat;30;30;40;30;0,3;1,15;0,3;0,3;1,2;0,55;0,55;0,8;0,4;0,6;0,8;0,4;1,15;1;02_15;CW_preparametred
+FAO-SUGARBET_dateL;Sugarbeet;25;35;50;50;0,35;1,2;0,7;0,3;1;0,5;0,6;0,6;0,5;0,8;1,2;1;1,1;0,7;03_29;CW_preparametred
+FAO-W-WHEAT_dateL_BTH;Winter Wheat  f.f.;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;10_28;CW_preparametred
+FAO-W-WHEAT_dateL_BDH;Winter Wheat  f.f.;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;10_15;CW_preparametred
+FAO-ALFALFA0_dateL;ALFALFA-perennial;150;30;150;35;0,4;0,95;0,9;1,2;1,2;0,55;0,55;0,55;1;1;1;1;1;0,7;09_30;CW_preparametred
+FAO-MAIZE_dateL;MAIZE  (Grain);20;35;40;30;0,3;1,2;0,35;0,3;1;0,55;0,55;0,8;0,4;0,4;1,3;0,5;1,25;2;06_05;CW_preparametred
+FAO-BARLEY_dateL_ORH;Barley;15;25;50;30;0,3;1,15;0,25;0,3;1,1;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;11_10;CW_preparametred
+FAO-BARLEY_dateL_ORP;Barley;15;25;50;30;0,3;1,15;0,25;0,3;1,1;0,55;0,55;0,9;0,2;0,6;0,5;0,4;1;1;02_25;CW_preparametred
+FAO-SOYBEAN_dateL;Soybean;15;15;40;15;0,4;1,15;0,5;0,3;1;0,5;0,6;0,9;0,4;0,8;1;0,4;0,85;0,6;05_15;CW_preparametred
+FAO-SORGHUM_dateL;SORGHUM (Grain);20;35;40;30;0,3;1;0,55;0,3;1,4;0,6;0,5;0,8;0,2;0,4;0,55;0,2;0,9;1,5;04_17;CW_preparametred
+FAO-TOMATO_dateL;Tomato;30;40;45;30;0,6;1,15;0,8;0,25;1;0,3;0,4;0,5;0,5;0,6;1,1;0,8;1,05;0,6;03_15;CW_preparametred
+FAO-SUNFLOWR_dateL;Sunflower;25;35;45;25;0,35;1,15;0,35;0,3;1,3;0,45;0,5;0,8;0,4;0,6;0,8;0,8;0,95;2;03_28;CW_preparametred
+FAO-GRAPES-W_dateL;Wine grapes;150;50;125;40;0,3;0,7;0,45;1,5;1,5;0,45;0,45;0,45;0,2;0,7;0,85;0,4;0,85;1,8;05_30;CW_preparametred
+FAO-Garlic;Garlic;15;25;70;40;0,7;1;0,7;0,3;0,5;0,3;0,3;0,3;NA;NA;NA;NA;NA;0,3;01_01;FAO-Garlic
+FAO-W-WHEAT_2;"Avoine d&apos;hiver";30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEAT
+FAO-W-WHEATF_2;"Blé dur d&apos;hiver";160;75;75;25;0,4;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEATF
+FAO-W-WHEAT_3;Blé tendre d’hiver;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEAT
+FAO-SUGARBET_2;Betterave;25;35;50;50;0,35;1,2;0,7;0,3;1;0,6;0,6;0,6;NA;NA;NA;NA;NA;0,7;01_01;FAO-SUGARBET
+FAO-W-WHEAT_4;Mélange multi-espèces;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEAT
+SB2023-colza_2;Colza d’hiver;15;165;61;37;0,45;1,1;0,45;0,3;1,25;0,7;0,7;0,7;NA;NA;NA;NA;NA;NA;01_01;SB2023-colza
+FAO-EGGPLANT;Autre légume ou fruit annuel;30;45;40;25;0,7;1,05;0,95;0,25;0,6;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;FAO-EGGPLANT
+FAO-ASPARAGUS;Autre légume ou fruit pérenne;90;30;200;45;0,5;0,95;0,3;1,2;1,8;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,8;01_01;FAO-ASPARAGUS
+FAO-STRAWBERRIES;Fraise;90;30;200;45;0,4;0,85;0,75;0,2;0,3;0,2;0,2;0,2;NA;NA;NA;NA;NA;0,2;01_01;FAO-STRAWBERRIES
+FAO-FAVABEAN;Féverole d’hiver;20;30;30;10;0,5;1,15;1,1;0,5;0,7;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,8;01_01;FAO-FABABEAN
+FAO-VEGETABL_2;Horticulture de plein champ;20;30;15;10;0,7;1,05;0,95;0,25;0,6;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;FAO-VEGETABL
+SB2023-prairie_2;Jachère;75;29;26;18;0,5;0,95;0,3;0,3;1;0,65;0,65;0,65;NA;NA;NA;NA;NA;NA;01_01;SB2023-prairie
+FAO-VEGETABL_3;Laitue, endive, mâche et autres;20;30;15;10;0,7;1,05;0,95;0,25;0,6;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;FAO-VEGETABL
+FAO-PULSES_2;Lentille cultivée (non fourragère);20;30;60;40;0,4;1,15;0,35;0,3;1;0,6;0,6;0,6;NA;NA;NA;NA;NA;0,4;01_01;FAO-PULSES
+FAO-ALFALFA0_2;Luzerne;150;30;150;35;0,4;0,95;0,9;1;2;0,55;0,55;0,55;NA;NA;NA;NA;NA;0,7;01_01;FAO-ALFALFA0
+FAO-VEGETABL_4;Maraîchage diversifié;20;30;15;10;0,7;1,05;0,95;0,25;0,6;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;FAO-VEGETABL
+FAO-MAIZE_2;Maïs doux;20;25;25;10;0,5;1,1;0,3;0,3;1,35;0,55;0,55;0,55;NA;NA;NA;NA;NA;NA;01_01;FAO-MAIZE
+FAO-MAIZE_3;Maïs (hors maïs doux);30;40;50;30;0,5;1,1;0,3;0,3;1,35;0,55;0,55;0,55;NA;NA;NA;NA;NA;NA;01_01;FAO-MAIZE
+FAO-PULSES_3;Mélange multi-espèces;20;30;60;40;0,4;1,15;0,35;0,3;1;0,6;0,6;0,6;NA;NA;NA;NA;NA;0,4;01_01;FAO-PULSES
+FAO-PULSES_4;Mélange de légumineuses fourragères (entre elles);20;30;60;40;0,4;1,15;0,35;0,3;1;0,6;0,6;0,6;NA;NA;NA;NA;NA;0,4;01_01;FAO-PULSES
+FAO-PULSES_5;Mélange de légumineuses;20;30;60;40;0,4;1,15;0,35;0,3;1;0,6;0,6;0,6;NA;NA;NA;NA;NA;0,4;01_01;FAO-PULSES
+FAO-SW-MELON_2;Melon;25;35;40;20;0,5;1,05;0,75;0,3;1;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,4;01_01;FAO-SW-MELON
+FAO-WATERMELON;Pastèque;20;30;30;30;0,4;1;0,75;0,8;1,5;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,4;01_01;FAO-WATERMELON
+FAO-SUGARCANE;Culture pérenne à forte biomasse;35;60;190;120;0,4;1,25;0,75;1,5;1,5;0,65;0,65;0,65;NA;NA;NA;NA;NA;3;01_01;FAO-SUGARCANE
+FAO-WALNUT;Noix (y compris noix de coco);20;10;130;30;0,5;1,1;0,65;1,7;2,4;0,5;0,5;0,5;NA;NA;NA;NA;NA;5;01_01;FAO-WALNUT
+FAO-ONIONS;Oignon / Échalote;15;25;70;40;0,7;1,05;0,75;0,3;0,6;0,3;0,3;0,3;NA;NA;NA;NA;NA;0,4;01_01;FAO-ONIONS
+FAO-OLIVES;Oliveraie;30;90;60;90;0,65;0,7;0,7;1,2;1,7;0,65;0,65;0,65;NA;NA;NA;NA;NA;5;01_01;FAO-OLIVES
+FAO-W-WHEAT_5;"Orge d&apos;hiver";30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEAT
+FAO-S-WHEAT;Orge de printemps;30;140;40;30;0,3;1,15;0,4;1;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-S-WHEAT
+FAO-PULSES_6;Pois chiche;20;30;60;40;0,4;1,15;0,35;0,3;1;0,6;0,6;0,6;NA;NA;NA;NA;NA;0,4;01_01;FAO-PULSES
+SB2023-pois_2;Pois et haricot frais (alimentation humaine);40;40;28;15;0,5;0,95;0,3;0,3;0,8;0,45;0,45;0,45;NA;NA;NA;NA;NA;NA;01_01;SB2023-pois
+SB2023-pois_3;Pois protéagineux d’hiver (alimentation animale);40;40;28;15;0,5;0,95;0,3;0,3;0,8;0,45;0,45;0,45;NA;NA;NA;NA;NA;NA;01_01;SB2023-pois
+FAO-BEANS-DR_2;Pois et haricot secs (alimentation humaine);20;30;40;20;0,4;1,15;0,35;0,3;0,9;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,4;01_01;FAO-BEANS-DR
+FAO-PUMPKING;Potiron, citrouille et autres courges 1;20;30;30;20;0,5;1;0,8;1;1,5;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,4;01_01;FAO-PUMPKING
+FAO-PUMPKING_2;Potiron, citrouille et autres courges 2;20;30;30;20;0,5;1;0,8;1;1,5;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,4;01_01;FAO-PUMPKING
+SB2023-prairie_3;Prairie permanente ( 6 ans et plus);75;29;26;18;0,5;0,95;0,3;0,3;1;0,65;0,65;0,65;NA;NA;NA;NA;NA;NA;01_01;SB2023-prairie
+SB2023-pois_4;Pois protéagineux de printemps (alimentation animale);40;40;28;15;0,5;0,95;0,3;0,3;0,8;0,45;0,45;0,45;NA;NA;NA;NA;NA;NA;01_01;SB2023-pois
+FAO-POTATO_2;Pomme de terre de consommation;30;35;50;30;0,5;1,15;0,75;0,3;0,6;0,3;0,3;0,3;NA;NA;NA;NA;NA;0,6;01_01;FAO-POTATO
+SB2023-prairie_4;Autre prairie temporaire;75;29;26;18;0,5;0,95;0,3;0,3;1;0,65;0,65;0,65;NA;NA;NA;NA;NA;NA;01_01;SB2023-prairie
+FAO-ALFALFA;Sainfoin;150;30;150;35;0,4;0,95;0,9;1;2;0,55;0,55;0,55;NA;NA;NA;NA;NA;0,7;01_01;FAO-ALFALFA
+FAO-W-WHEAT_6;Seigle d’hiver;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEAT
+FAO-SORGHUM_2;Sorgho;20;35;40;30;0,3;1;0,55;0,3;1,4;0,5;0,5;0,5;NA;NA;NA;NA;NA;1,5;01_01;FAO-SORGHUM
+SB2023-soja_2;Soja;47;50;38;36;0,5;1,15;0,35;0,3;0,95;0,5;0,5;0,5;NA;NA;NA;NA;NA;NA;01_01;SB2023-soja
+SB2023-prairie_5;Surface pastorale;75;29;26;18;0,5;0,95;0,3;0,3;1;0,65;0,65;0,65;NA;NA;NA;NA;NA;NA;01_01;SB2023-prairie
+SB2023-prairie_6;Surface pastorale;75;29;26;18;0,5;0,95;0,3;0,3;1;0,65;0,65;0,65;NA;NA;NA;NA;NA;NA;01_01;SB2023-prairie
+FAO-TOMATO_2;Tomate;30;40;45;30;0,6;1,15;0,8;0,25;1;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,6;01_01;FAO-TOMATO
+FAO-CLOVER;Trèfle;150;30;150;35;0,4;0,9;0,85;0,3;0,9;0,5;0,5;0,5;NA;NA;NA;NA;NA;0,6;01_01;FAO-CLOVER
+FAO-SUNFLOWR_2;Tournesol;25;35;45;25;0,35;1,15;0,35;0,3;1,3;0,5;0,5;0,5;NA;NA;NA;NA;NA;2;01_01;FAO-SUNFLOWR
+FAO-W-WHEAT_7;Triticale d’hiver;30;140;40;30;0,7;1,15;0,25;0,3;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;1;01_01;FAO-W-WHEAT
+FAO-CLOVER_2;Vesce, mélilot, jarosse, serradelle;150;30;150;35;0,4;0,9;0,85;0,6;0,9;0,5;0,5;0,5;NA;NA;NA;NA;NA;0,6;01_01;FAO-CLOVER
+SB2023-vignes_2;Vigne : raisins de cuve;150;50;125;40;0,3;0,7;0,45;1,5;2;0,45;0,45;0,45;NA;NA;NA;NA;NA;1,8;01_01;SB2023-vignes
+SB2023-vergers_2;Vergers;115;47;45;42;0,55;0,95;0,15;1;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;4;01_01;SB2023-vergers
+Basilic_1;Basilic1;90;30;200;45;0,63;1,12;0,97;0,1;0,3;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,6;01_01;Farahbakhsh et al., 2019
+Basilic_2;Basilic2;90;30;200;45;0,4;1;0,6;0,1;0,3;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,6;01_01;Naderianfar, 2016
+Basilic_3;Basilic3;90;30;200;45;0,35;1;1;0,1;0,3;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,6;01_01;Marques et al., 2015
+Coriandre_1;Coriandre1;90;30;200;45;0,21;1,12;0,89;0,1;0,3;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,7;01_01;Ghamarnia et Sasari, 2015
+Coriandre_2;Coriandre2;90;30;200;45;0,82;1,07;0,93;0,1;0,3;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,7;01_01;Silva et al., 2013
+Cumin;Cumin;90;30;200;45;0,4;0,98;0,95;0,1;0,3;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,4;01_01;Santosh et al., 2021
+Menthe_douce;Menthe douce;90;30;200;45;0,4;0,85;0,5;0,4;0,8;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,8;01_01;Marino et al., 2019
+Menthe_poivree1;Menthe poivrée1;90;30;200;45;0,85;0,95;0,95;0,4;0,8;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,8;01_01;Ghamarnia et al., 2021
+Menthe_poivree2;Menthe poivrée2;90;30;200;45;0,16;0,95;0,95;0,4;0,8;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,8;01_01;Selker et Rupp, 2004
+Safran_1;Safran1;90;30;200;45;0,37;0,87;0,42;0,15;0,2;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;Siuki et al., 2023
+Safran_2;Safran2;90;30;200;45;0,48;1,27;0,37;0,15;0,2;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;Noghabi et al., 2020
+Safran_3;Safran3;90;30;200;45;0,35;0,95;0,35;0,15;0,2;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,3;01_01;Yarami et al., 2011
+Sarriette_jardin;Sarriette des jardins;90;30;200;45;0,45;1,3;NA;0,2;0,4;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,4;01_01;Saeedinia et al., 2019
+Angelique;Angélique;90;30;200;45;0,3;1,1;0,7;0,2;0,6;0,45;0,45;0,45;NA;NA;NA;NA;NA;2,5;01_01;Pedroso, 2025
+FAO-CARROT;Bardane;30;40;60;20;0,7;1,05;0,95;0,5;1;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,3;01_01;FAO-CARROT
+Camomille;Camomille;10;45;35;15;0,16;0,86;0,54;0,05;0,3;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,6;01_01;Saeedinia et al., 2018
+Marguerite;Marguerite;90;30;200;45;0,4;1,1;0,7;0,1;0,4;0,35;0,35;0,35;NA;NA;NA;NA;NA;0,8;01_01;Pedroso, 2025
+Estragon;Estragon;30;60;30;30;0,2;0,8;0,4;0,15;0,5;0,45;0,45;0,45;NA;NA;NA;NA;NA;1,2;01_01;Orte, 2022
+Origan;Origan;30;60;30;30;0,3;0,87;0,7;0,15;0,5;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,8;01_01;Orte, 2022
+Romarin_1;Romarin1;90;30;200;45;0,3;1,04;0,96;0,2;1;0,45;0,45;0,45;NA;NA;NA;NA;NA;2;01_01;Ghamarnia et al., 2022
+Romarin_2;Romarin2;90;30;200;45;0,4;0,75;0,95;0,2;1;0,45;0,45;0,45;NA;NA;NA;NA;NA;2;01_01;Noorollahi et al., 2016
+Romarin_3;Romarin3;30;60;30;30;0,2;0,73;0,4;0,2;1;0,45;0,45;0,45;NA;NA;NA;NA;NA;2;01_01;Orte, 2022
+Sarriette_montagne;Sarriette des montagnes;90;30;200;45;0,45;1,3;NA;0,15;0,4;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,5;01_01;Saeedinia et al., 2019
+Thym;Thym;90;30;200;45;0,3;1,12;0,73;0,1;0,4;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,4;01_01;Fakhri et al., 2023
+Fenugrec;Fenugrec;20;30;15;10;0,68;1,06;0,78;0,1;0,4;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,8;01_01;Abd-Elghany et al., 2017
+Lavande_lavandin_1;Lavande et lavandin1;50;50;90;50;0,35;0,95;0,8;0,15;0,7;0,45;0,45;0,45;NA;NA;NA;NA;NA;1;01_01;Pereira et al., 2024
+Lavande_lavandin_2;Lavande et lavandin2;50;50;90;50;0,2;0,95;0,9;0,15;0,7;0,45;0,45;0,45;NA;NA;NA;NA;NA;1;01_01;Noorollahi et al., 2016
+Moutarde;Moutarde;20;30;15;10;0,23;1,28;0,3;0,1;0,5;0,4;0,4;0,4;NA;NA;NA;NA;NA;2;01_01;Marouelli et al., 2017
+Mélisse;Mélisse;90;30;200;45;0,42;1,16;0,92;0,1;0,4;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,8;01_01;Ghamania et al., 2014
+Sauge;Sauge sclarée et officinale;90;30;200;45;0,3;1;0,8;0,15;0,6;0,45;0,45;0,45;NA;NA;NA;NA;NA;1,2;01_01;Pedroso, 2025
+Verveine;Verveine;90;30;200;45;0,3;1;0,8;0,15;0,5;0,45;0,45;0,45;NA;NA;NA;NA;NA;0,7;01_01;Pedroso, 2025
+Géranium;Géranium;90;30;200;45;0,4;1,1;0,9;0,1;0,5;0,4;0,4;0,4;NA;NA;NA;NA;NA;1,2;01_01;Pedroso, 2025
+Hélichryse;Hélichryse;90;30;200;45;0,4;1,1;0,9;0,1;0,4;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,6;01_01;Pedroso, 2025
+Violette;Violette;90;30;200;45;0,4;1,1;0,9;0,05;0,2;0,4;0,4;0,4;NA;NA;NA;NA;NA;0,2;01_01;Pedroso, 2025
+Truffieres;Truffière (chênaie de plants mycorhizés);115;47;45;42;0,55;0,95;0,15;1;1,5;0,55;0,55;0,55;NA;NA;NA;NA;NA;NA;01_01;SB2023-vergers
+PrairieKC1;Prairie;75;29;26;78;1;1;1;0,6;0,6;0,65;0,65;0,65;NA;NA;NA;NA;NA;NA;03_01;KCegal1
+Amandier_MementoBRL;Amandier;90;20;100;20;0,6;0,6;0,6;120;120;0,7;0,55;0,7;NA;NA;NA;NA;NA;NA;01_01;memento_BRL_paramPegalVRG_paramZStevensetal2012
+Sarrazin;Sarrazin;108;30;30;20;0,5;1,1;0,7;20;50;0,55;0,55;0,9;NA;NA;NA;NA;NA;NA;01_01;Yan et al. 2013_paramPwheat
+FAO-TOMATO_modifie;Tomato_modif;30;40;45;30;0,6;1,15;0,8;0,25;1;0,3;0,4;0,5;0,5;0,6;1,1;0,8;1,05;0,6;03_01;modification of CW_preparametred
+SB2023-vergers_modifie;vergers (AqYield crop code)_modifie;115;47;45;42;0,55;0,95;0,15;1,5;1,5;0,7;0,55;0,7;NA;NA;NA;NA;NA;NA;01_01;modification of CW_preparametred

@@ -1,0 +1,8 @@
+#logo-footer p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem; /* space between images */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+  margin: 1rem 0; /* vertical spacing */
+}

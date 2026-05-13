@@ -1,0 +1,140 @@
+Crop_RPG;Crop_cw;name;Color
+DLZ;FAO-ALFALFA0_dateL;ALFALFA-perennial;#e41a1c
+LU5;FAO-ALFALFA0_dateL;ALFALFA-perennial;#377eb8
+LU6;FAO-ALFALFA0_dateL;ALFALFA-perennial;#4daf4a
+LU7;FAO-ALFALFA0_dateL;ALFALFA-perennial;#984ea3
+LU8;FAO-ALFALFA0_dateL;ALFALFA-perennial;#ff7f00
+LUD;FAO-ALFALFA0_dateL;ALFALFA-perennial;#ffff33
+LUZ;FAO-ALFALFA0_dateL;ALFALFA-perennial;#a65628
+NA;FAO-ALFALFA1;ALFALFA 1 year;NA
+ART;FAO-ARTICHOK;Artichoke;#f781bf
+NA;FAO-BANANA1;BANANA 1st year;NA
+BCF;FAO-BANANA2;BANANA 2nd year;#66c2a5
+BCI;FAO-BANANA2;BANANA 2nd year;#fc8d62
+BCP;FAO-BANANA2;BANANA 2nd year;#8da0cb
+BCR;FAO-BANANA2;BANANA 2nd year;#e78ac3
+BEA;FAO-BANANA2;BANANA 2nd year;#a6d854
+BEF;FAO-BANANA2;BANANA 2nd year;#ffd92f
+BEI;FAO-BANANA2;BANANA 2nd year;#e5c494
+BEP;FAO-BANANA2;BANANA 2nd year;#b3b3b3
+BER;FAO-BANANA2;BANANA 2nd year;#1b9e77
+ORP;FAO-BARLEY_dateL_ORP;Barley;#d95f02
+ORH;FAO-BARLEY_dateL_ORH;Barley;#7570b3
+PHS;FAO-BEANS-DR;Dry beans;#e7298a
+PHF;FAO-BEANS-GR;Green beans;#66a61e
+CHU;FAO-CABBAGE;CABBAGE Crucifers;#e6ab02
+DCF;FAO-CABBAGE;CABBAGE Crucifers;#a6761d
+CHF;FAO-CABBAGE;CABBAGE Crucifers;#666666
+AGR;FAO-CITRUS;CITRUS 70% ca bare;#1f78b4
+NA;FAO-COTTON;COTTON;NA
+NA;FAO-DATEPALM;Date palms;NA
+NA;FAO-GRAINS;Small Grains;NA
+VRT;FAO-GRAPES-T;table grapes;#33a02c
+RVI;FAO-GRAPES-W_dateL;Wine grapes;#fb9a99
+VRC;FAO-GRAPES-W_dateL;Wine grapes;#b15928
+VRN;FAO-GRAPES-W_dateL;Wine grapes;#6a3d9a
+NA;FAO-GRASS-C;Turf grass cool cl;NA
+NA;FAO-GRASS-W;Turf grass warm;NA
+NA;FAO-GRONDNUT;Groudnut;NA
+MID;FAO-MAIZE_dateL;MAIZE  (Grain);#cab2d6
+MIS;FAO-MAIZE_dateL;MAIZE  (Grain);#fdbf6f
+NA;FAO-MANGO;MANGO;NA
+DML;FAO-MILLET;MILLET;#ffed5f
+MLT;FAO-MILLET;MILLET;#b2df8a
+NA;FAO-PASTURE;Pasture perennial;NA
+NA;FAO-PEPPER;Sweet Peppers;NA
+PTC;FAO-POTATO;Potato;#fb8073
+PTF;FAO-POTATO;Potato;#80b1d4
+MC5;FAO-PULSES;Pulses;#fccde5
+MC6;FAO-PULSES;Pulses;#bc80bd
+MC7;FAO-PULSES;Pulses;#ccebc5
+MC8;FAO-PULSES;Pulses;#ffed6f
+MH5;FAO-PULSES;Pulses;#8dd3c7
+MH6;FAO-PULSES;Pulses;#ffffb3
+MH7;FAO-PULSES;Pulses;#bebada
+ML5;FAO-PULSES;Pulses;#fb8072
+ML6;FAO-PULSES;Pulses;#80b1d3
+ML7;FAO-PULSES;Pulses;#fdb462
+ML8;FAO-PULSES;Pulses;#bd0026
+MLC;FAO-PULSES;Pulses;#7fcdbb
+MLD;FAO-PULSES;Pulses;#225ea8
+MLG;FAO-PULSES;Pulses;#feb24c
+DSF;FAO-SORGHUM_dateL;SORGHUM (Grain);#b10026
+SOG;FAO-SORGHUM_dateL;SORGHUM (Grain);#3182bd
+SOJ;FAO-SOYBEAN_dateL;Soybean;#31a354
+DSJ;FAO-SOYBEAN_dateL;Soybean;#fd8d3c
+BTN;FAO-SUGARBET_dateL;Sugarbeet;#756bb1
+CSA;FAO-SUGARCAN;Sugarcane (Ratoon);#b2abd2
+CSF;FAO-SUGARCAN;Sugarcane (Ratoon);#fdb863
+CSI;FAO-SUGARCAN;Sugarcane (Ratoon);#78c679
+CSP;FAO-SUGARCAN;Sugarcane (Ratoon);#1d91c0
+CSR;FAO-SUGARCAN;Sugarcane (Ratoon);#737373
+MLO;FAO-SW-MELON;Sweet Melon;#c51b8a
+TAB;FAO-TOBACCO;Tobacco;#fe9929
+TOM;FAO-TOMATO_modifie;Tomato_modif;#54278f
+TOT;FAO-TOMATO_dateL;Tomato;#238444
+NA;FAO-VEGETABL;Small Vegetables;NA
+BTH;FAO-W-WHEAT_dateL_BTH;Winter Wheat  f.f.;#f768a2
+BDH;FAO-W-WHEAT_dateL_BDH;Winter Wheat  f.f.;#80cdc1
+NA;FAO-W-WHEATF;Winter Wheat;NA
+BTP;FAO-WHEAT_dateL;Spring Wheat;#c7e9b4
+BDP;FAO-WHEAT_dateL;Spring Wheat;#762a83
+NA;KURN-COTTON;COTTON;NA
+NA;KURN-GRONDNUT KHARIF;Groudnut Kharif;NA
+NA;KURN-GRONDNUT RABI;Groudnut Rabi;NA
+NA;KURN-SORGHUM-HYV;SORGHUM (Grain);NA
+NA;KURN-SORGHUM;SORGHUM (Grain);NA
+NA;KURN-SUGARCAN;Sugarcane (Ratoon);NA
+CZH;SB2023-colza;colza (AqYield crop code);#b30000
+NA;SB2023-CP;CP (AqYield crop code);NA
+NA;SB2023-maisP;maisP (AqYield crop code);NA
+NA;SB2023-maisT;maisT (AqYield crop code);NA
+MIE;SB2023-maisEnsil;maisEnsil (AqYield crop code);#74c476
+MPC;SB2023-pois;pois (AqYield crop code);#41b6c4
+MPP;SB2023-pois;pois (AqYield crop code);#c994c7
+PPR;SB2023-pois;pois (AqYield crop code);#e34a33
+PFP;SB2023-pois;pois (AqYield crop code);#756bb2
+PP5;SB2023-pois;pois (AqYield crop code);#1f78b5
+PP6;SB2023-pois;pois (AqYield crop code);#fb9a98
+PP7;SB2023-pois;pois (AqYield crop code);#fdd49e
+PP8;SB2023-pois;pois (AqYield crop code);#b2e2e2
+DPS;SB2023-pois;pois (AqYield crop code);#a50f15
+PPH;SB2023-prairie;prairie (AqYield crop code);#6baed6
+PRL;SB2023-prairie;prairie (AqYield crop code);#238b45
+PTR;SB2023-prairie;prairie (AqYield crop code);#fdd0a2
+RGA;SB2023-prairie;prairie (AqYield crop code);#fa9fb5
+NA;SB2023-semence;semence (AqYield crop code);NA
+NA;SB2023-soja;soja (AqYield crop code);NA
+NA;SB2023-tour;tour (AqYield crop code);NA
+VRG;SB2023-vergers_modifie;vergers (AqYield crop code)_modifie;#7a0177
+VGD;SB2023-vergers;vergers (AqYield crop code);#beaed4
+NA;SB2023-vignes;vignes (AqYield crop code);NA
+AIL;Ail_test;Ail_test;#fdcc8a
+OLI;olivier_test;olivier_test;#238443
+LAV;Lavande_lavandin_1;Lavande et lavandin1;#f768a1
+TRU;Truffieres;Truffière (chênaie de plants mycorhizés);#2b8cbe
+CAR;Carotte;Carotte;#ff7f32
+POR;Poireau;Poireau;#4daf4a
+NOS;Noisetier;Noisetier;#8c510a
+AVH;FAO-W-WHEAT_2;"Avoine d&apos;hiver";#e3c565
+TTH;FAO-W-WHEAT_7;Triticale d’hiver;#C9A639
+MCR;FAO-PULSES_4;Mélange de légumineuses fourragères (entre elles);#66C2A5
+SRS;Sarrazin;Sarrazin;#B3DE69
+TRN;FAO-SUNFLOWR_2;Tournesol;#FFD92F
+PHI;SB2023-pois;pois (AqYield crop code);#1B9E77
+FVL;FAO-FAVABEAN;Féverole d’hiver;#7FC97F
+PCH;FAO-PULSES_6;Pois chiche;#8DA0CB
+LEC;FAO-PULSES_2;Lentille cultivée (non fourragère);#A6CEE3
+MLF;FAO-PULSES_4;Mélange de légumineuses fourragères (entre elles);#78C679
+CPL;FAO-PULSES_3;Mélange multi-espèces;#41AB5D
+PSL;Estragon;Estragon;#66A61E
+AAR;Basilic_3;Basilic3;#4E8C2A
+PVP;FAO-PEPPER;Sweet Peppers;#E41A1C
+MDI;FAO-VEGETABL;Small Vegetables;#F781BF
+OIG;FAO-ONIONS;Oignon / Échalote;#FDBF6F
+POT;FAO-PUMPKING;Potiron, citrouille et autres courges 1;#FF9E1A
+FLA;FAO-VEGETABL;Small Vegetables;#FBB4AE
+PFR;FAO-STRAWBERRIES;Fraise;#D73027
+PWT;SB2023-vergers;vergers (AqYield crop code);#A6761E
+CBT;SB2023-vergers;vergers (AqYield crop code);#C49C53
+Ama;Amandier_MementoBRL;Amandier;#9E6B43

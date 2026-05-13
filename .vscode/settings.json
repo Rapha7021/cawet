@@ -1,0 +1,11 @@
+{
+    "[python]": {
+        "interpreters.startupBehavior": "disabled"
+    },
+    "chat.tools.terminal.autoApprove": {
+        "/^cmd /c \"R --quiet --no-restore --no-save -e devtools::document\\(\\)\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

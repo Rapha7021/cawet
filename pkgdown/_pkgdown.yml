@@ -1,0 +1,48 @@
+url: https://forge.inrae.fr/umr-g-eau/cawet
+template:
+  package: pkgdown
+  bootstrap: 5
+  math-rendering: mathjax
+  params:
+    bootswatch: flatly
+    navbar:
+      type: inverse
+      background: "#0053B3"
+      text: "#ffffff"
+      border: "#004494"
+    bslib:
+      bg: "#ffffff"
+      fg: "#0053B3"
+      primary: "#0053B3"
+      success: "#4CAF50"
+      info: "#46B8DA"
+      warning: "#FFC107"
+      danger: "#D9534F"
+destination: public
+development:
+  mode: auto
+navbar:
+  structure:
+    right:
+      - gitlab
+      - packages
+  components:
+    gitlab:
+      icon: fab fa-gitlab fa-lg
+      href: https://forge.inrae.fr/umr-g-eau/cawet
+    packages:
+      text: CAWET related packages
+      menu:
+      - text: RADIS
+        href: https://umr-g-eau.pages-forge.inrae.fr/radis
+      - text: RADIS.api
+        href: https://umr-g-eau.pages-forge.inrae.fr/radis.api
+      - text: CropWat
+        href: https://umr-g-eau.pages-forge.inrae.fr/cropwat
+      - text: airGRccia
+        href: https://airgriwrm.pages-forge.inrae.fr/airgrccia
+repo:
+  url:
+    home: https://forge.inrae.fr/umr-g-eau/cawet
+    source: https://forge.inrae.fr/umr-g-eau/cawet/-/tree/main/
+    issue: https://forge.inrae.fr/umr-g-eau/cawet/-/issues
