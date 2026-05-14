@@ -3,7 +3,7 @@
 #  Modifier uniquement les lignes ci-dessous
 # ============================================================
 
-dossier_travail  <- "/home/shiff/Téléchargements"   # dossier où seront copiés les données et résultats
+dossier_travail  <- "/home/shiff/Bureau/CAWET"   # dossier où seront copiés les données et résultats
 nom_ordonnanceur <- "Ordonnanceur_exemple.xlsx" # nom de ton fichier ordonnanceur
 
 # Valeurs saisies via lancer_CAWET.bat (prioritaires sur les lignes ci-dessus)
