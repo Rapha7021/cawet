@@ -234,7 +234,20 @@ run_script1 <- function(
         for (poly in unique(shapefile_data_base$id_poly)) {
           shapefile_data_base_pol <- shapefile_data_base %>%
             dplyr::filter(id_poly == poly)
-          if (Year > 2022) {
+          # Support colonne optionnelle Forced_RPG_year dans l'ordonnanceur
+          forced_rpg <- if ("Forced_RPG_year" %in% names(Scenario) &&
+                            !is.na(Scenario$Forced_RPG_year[Scen_i]) &&
+                            nchar(trimws(Scenario$Forced_RPG_year[Scen_i])) > 0) {
+            as.integer(Scenario$Forced_RPG_year[Scen_i])
+          } else {
+            NULL
+          }
+          if (!is.null(forced_rpg)) {
+            Year_rpg <- forced_rpg
+            cli_alert_info(
+              "Forced_RPG_year detecte : utilisation du RPG {Year_rpg} pour l'annee de simulation {Year}."
+            )
+          } else if (Year > 2022) {
             Year_rpg <- 2022
             cli_alert_danger(
               "Téléchargement des données RPG pour l'année {Year} est supérieur à 2022. Utilisation de 2022 à la place."
@@ -261,11 +274,44 @@ run_script1 <- function(
           } else {
             sources_RPG <- c("IGN")
           }
-          shapefile_data_pol <- RADIS::get_rpg_data(
-            sf = shapefile_data_base_pol,
-            year = Year_rpg,
-            id = "id_poly",
-            source = sources_RPG
+          shapefile_data_pol <- tryCatch(
+            RADIS::get_rpg_data(
+              sf = shapefile_data_base_pol,
+              year = Year_rpg,
+              id = "id_poly",
+              source = sources_RPG
+            ),
+            error = function(e) {
+              msg <- conditionMessage(e)
+              if (!grepl("502|503|Bad Gateway|Service Unavailable|404", msg)) stop(e)
+
+              # Fallback 1 : WFS BBOX (contourne les erreurs 502 du filtre CQL)
+              cli::cli_alert_warning(
+                "Echec telechargement IGN ({msg}). Tentative WFS BBOX..."
+              )
+              rpg_bbox <- get_rpg_from_ign_wfs_bbox(
+                sf_poly   = shapefile_data_base_pol,
+                year      = Year_rpg,
+                crs       = sf::st_crs(shapefile_data_base_pol),
+                cache_dir = file.path(Working_path, "Cache_RPG")
+              )
+              if (!is.null(rpg_bbox) && nrow(rpg_bbox) > 0) return(rpg_bbox)
+
+              # Fallback 2 : ODR (données partielles)
+              if (!("ODR" %in% sources_RPG) && Year_rpg >= 2018 && Year_rpg <= 2023) {
+                cli::cli_alert_warning(
+                  "WFS BBOX sans resultats. Tentative avec ODR (donnees partielles)..."
+                )
+                RADIS::get_rpg_data(
+                  sf = shapefile_data_base_pol,
+                  year = Year_rpg,
+                  id = "id_poly",
+                  source = "ODR"
+                )
+              } else {
+                stop(e)
+              }
+            }
           )
 
           #Correction of some wrong information code in the RPG download -> can add others if needed
@@ -625,19 +671,42 @@ run_script1 <- function(
           ) %>%
           dplyr::filter(!is.na(id_parcel))
       } else if (Scenario$Sol_fixed_RADIS[Scen_i] == "Yes_BDGSF") {
-        Depth <- get_soil_depth(
-          parcelles_avec_maille_y,
-          source = "BDGSF"
+        # Cache des données sols BDGSF : évite ~10 min de re-téléchargement
+        sol_cache_dir <- file.path(Working_path, "Cache_Sols")
+        dir.create(sol_cache_dir, showWarnings = FALSE, recursive = TRUE)
+        bb_sol <- sf::st_bbox(sf::st_transform(parcelles_avec_maille_y, 4326))
+        sol_cache_key <- sprintf(
+          "BDGSF_%d_%.2f_%.2f_%.2f_%.2f",
+          Year, bb_sol["xmin"], bb_sol["ymin"], bb_sol["xmax"], bb_sol["ymax"]
         )
+        depth_cache_file <- file.path(sol_cache_dir, paste0("Depth_", sol_cache_key, ".csv"))
+        awc_cache_file   <- file.path(sol_cache_dir, paste0("AWC_",   sol_cache_key, ".csv"))
 
-        AWC <- as.data.frame(RADIS::get_soil_awc(
-          sf = parcelles_avec_maille_y,
-          source = "BDGSF"
-        )) %>%
-          dplyr::select(-geometry) %>%
-          dplyr::mutate(AWC_mean = soil_awc) %>%
-          dplyr::select(c(id_parcel, AWC_mean))
-        cli_alert_success("Processing of {Year} for AWC ok")
+        if (file.exists(depth_cache_file) && file.exists(awc_cache_file)) {
+          cli::cli_alert_info("Sols BDGSF: cache trouve -> {depth_cache_file}")
+          Depth <- read.csv2(depth_cache_file, stringsAsFactors = FALSE)
+          AWC   <- read.csv2(awc_cache_file,   stringsAsFactors = FALSE)
+          # Forcer character pour éviter mismatch de type lors du join
+          Depth$id_parcel <- as.character(Depth$id_parcel)
+          AWC$id_parcel   <- as.character(AWC$id_parcel)
+          cli_alert_success("Processing of {Year} for AWC ok")
+        } else {
+          Depth <- get_soil_depth(
+            parcelles_avec_maille_y,
+            source = "BDGSF"
+          )
+          AWC <- as.data.frame(RADIS::get_soil_awc(
+            sf = parcelles_avec_maille_y,
+            source = "BDGSF"
+          )) %>%
+            dplyr::select(-geometry) %>%
+            dplyr::mutate(AWC_mean = soil_awc) %>%
+            dplyr::select(c(id_parcel, AWC_mean))
+          cli_alert_success("Processing of {Year} for AWC ok")
+          write.csv2(Depth, depth_cache_file, row.names = FALSE)
+          write.csv2(AWC,   awc_cache_file,   row.names = FALSE)
+          cli::cli_alert_success("Sols BDGSF mis en cache: {sol_cache_dir}")
+        }
       } else if (Scenario$Sol_fixed_RADIS[Scen_i] == "Yes_Infoetsol") {
         Depth <- get_soil_depth(
           parcelles_avec_maille_y,
@@ -911,9 +980,11 @@ run_script1 <- function(
       )
 
       #Creation tableau pour relancer avec un territoire fantoche
+      sf::sf_use_s2(FALSE) # s2 rejette certaines geometries unionisees ; GEOS suffit ici
       tabl_extract_terrfantoche <- parcelles_avec_maille_y %>%
         dplyr::group_by(code_cultu, id_poly) %>%
         dplyr::summarise(surf_parc = sum(surface_m2) / 10000) %>%
+        sf::st_make_valid() %>% # correction geom invalides avant centroide
         sf::st_transform(4326) %>% # reprojection en WGS84 (pour lon/lat en degres)
         dplyr::mutate(
           centroide = sf::st_centroid(geometry), # Calcul du centroïde (ça marche pour polygon ET multipolygon)
@@ -923,6 +994,7 @@ run_script1 <- function(
         dplyr::select(-centroide) %>%
         as.data.frame() %>%
         dplyr::select(-geometry)
+      sf::sf_use_s2(TRUE)
       tabl_extract_terrfantoche <- tabl_extract_terrfantoche %>%
         dplyr::mutate(id_parcel = rownames(tabl_extract_terrfantoche)) %>%
         dplyr::select(
@@ -1157,6 +1229,35 @@ run_script1 <- function(
             )
             climate_mi_df <- as.data.frame(climate_mi) %>%
               dplyr::mutate(DATE = as.Date(DATE))
+            if (nrow(climate_mi_df) == 0) {
+              # L'API G-EAU ne couvre que 1958-2019. Fallback vers data.gouv.fr (Météo-France).
+              yr_from <- Scenario$First_year_simulation[Scen_i]
+              yr_to   <- Scenario$Last_year_simulation[Scen_i]
+              cli::cli_alert_warning(paste0(
+                "API SAFRAN (G-EAU) vide pour la maille ", maille,
+                " (", yr_from, "-", yr_to, "). ",
+                "Basculement sur data.gouv.fr (Meteo-France)..."
+              ))
+              cache_sim2 <- file.path(Working_path, "Cache_SIM2")
+              climate_mi_df <- get_sim2_from_datagouv(
+                lambx     = Maille_i$lambx,
+                lamby     = Maille_i$lamby,
+                year_from = yr_from,
+                year_to   = yr_to,
+                cache_dir = cache_sim2
+              )
+              if (nrow(climate_mi_df) == 0) {
+                stop(paste0(
+                  "Aucune donnee SIM2 trouvee pour la maille ", maille,
+                  " sur la periode ", yr_from, "-", yr_to,
+                  " (G-EAU API et data.gouv.fr consultes)."
+                ))
+              }
+              cli::cli_alert_success(paste0(
+                "Donnees SIM2 recuperees depuis data.gouv.fr : ",
+                nrow(climate_mi_df), " lignes."
+              ))
+            }
           }
 
           if (Scenario$Climat_data_source[Scen_i] == "Drias") {
@@ -1220,6 +1321,22 @@ run_script1 <- function(
             climate_mi_df,
             paste0(Input_run_path_Scen, "/Meteo/Meteo_maille", maille, ".csv"),
             row.names = F
+          )
+        }
+      }
+
+      # Mode Network + données externes : on duplique le CSV externe pour chaque maille
+      if (Scenario$Climat_data_source[Scen_i] == "Forced_otherclimaticdata") {
+        cli_alert_info(
+          "Mode Network + Forced_otherclimaticdata : application de la même météo externe à chaque maille"
+        )
+        for (maille in as.numeric(unique(
+          parcelle_avec_maille_grouped$id_maille
+        ))) {
+          write.csv2(
+            Meteo_charged,
+            paste0(Input_run_path_Scen, "/Meteo/Meteo_maille", maille, ".csv"),
+            row.names = FALSE
           )
         }
       }

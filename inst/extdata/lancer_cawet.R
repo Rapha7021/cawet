@@ -4,7 +4,16 @@
 # ============================================================
 
 dossier_travail  <- "/home/shiff/Bureau/CAWET"   # dossier où seront copiés les données et résultats
-nom_ordonnanceur <- "Ordonnanceur_exemple.xlsx" # nom de ton fichier ordonnanceur
+nom_ordonnanceur <- "Ordonnanceur_zone1 - 2018-2025_radis.xlsx" # nom de ton fichier ordonnanceur
+
+# ---------------------------------------------------------------
+#  MODE DEBUG RAPIDE : réutiliser un Charged_inputs déjà téléchargé
+#  Évite de retélécharger RPG / sols / météo (~30 min → ~2 min)
+#  Définir le chemin vers le dossier Charged_inputs d'un run précédent,
+#  ou laisser NULL pour lancer un run complet.
+# ---------------------------------------------------------------
+# Exemple :
+charged_inputs_existants <- NULL
 
 # Valeurs saisies via lancer_CAWET.bat (prioritaires sur les lignes ci-dessus)
 if (nzchar(Sys.getenv("CAWET_DOSSIER_TRAVAIL")))  dossier_travail  <- Sys.getenv("CAWET_DOSSIER_TRAVAIL")
@@ -38,5 +47,6 @@ chemin_ordonnanceur <- file.path(dossier_travail, "Ordonnanceur", nom_ordonnance
 library(CAWET)
 run(
   chemin_ordonnanceur = chemin_ordonnanceur,
-  Working_path        = dossier_travail
+  Working_path        = dossier_travail,
+  charged_inputs_path = charged_inputs_existants
 )

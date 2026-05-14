@@ -550,7 +550,7 @@ run_script3_1 <- function(
           CODE_CU = 'Comparison',
           Mois = NA,
           An = paste0(Year_list_valterr, Connexion, 'Comparison'),
-          Irrigation_m3 = Validation_territoire$Water_quantity_m3,
+          Irrigation_m3 = as.numeric(Validation_territoire$Water_quantity_m3),
           ETc_m3 = NA,
           ETc_mean = NA,
           surf_tot = NA
@@ -656,7 +656,7 @@ run_script3_1 <- function(
 
         Irrig_val_terr_df2 <- data.frame(
           An = as.character(Year_list_valterr),
-          Irrigation_validation = Validation_territoire$Water_quantity_m3
+          Irrigation_validation = as.numeric(Validation_territoire$Water_quantity_m3)
         )
         Comparatif_val_calc <- Results_Cw %>%
           dplyr::mutate(An = as.character(An)) %>%
@@ -738,7 +738,7 @@ run_script3_1 <- function(
           CODE_CU = 'Validation',
           Mois = NA,
           An = 'Comparison',
-          Irrigation_m3 = Validation_territoire$Water_quantity_m3[1],
+          Irrigation_m3 = as.numeric(Validation_territoire$Water_quantity_m3[1]),
           ETc_m3 = NA,
           ETc_mean = NA,
           surf_tot = NA
