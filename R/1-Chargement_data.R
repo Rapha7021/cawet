@@ -1229,16 +1229,16 @@ run_script1 <- function(
             )
             climate_mi_df <- as.data.frame(climate_mi) %>%
               dplyr::mutate(DATE = as.Date(DATE))
+            yr_from <- Scenario$First_year_simulation[Scen_i]
+            yr_to   <- Scenario$Last_year_simulation[Scen_i]
+            cache_sim2 <- file.path(Working_path, "Cache_SIM2")
             if (nrow(climate_mi_df) == 0) {
-              # L'API G-EAU ne couvre que 1958-2019. Fallback vers data.gouv.fr (Météo-France).
-              yr_from <- Scenario$First_year_simulation[Scen_i]
-              yr_to   <- Scenario$Last_year_simulation[Scen_i]
+              # L'API G-EAU ne couvre que 1958-2019 → utiliser data.gouv.fr pour toute la période.
               cli::cli_alert_warning(paste0(
                 "API SAFRAN (G-EAU) vide pour la maille ", maille,
                 " (", yr_from, "-", yr_to, "). ",
                 "Basculement sur data.gouv.fr (Meteo-France)..."
               ))
-              cache_sim2 <- file.path(Working_path, "Cache_SIM2")
               climate_mi_df <- get_sim2_from_datagouv(
                 lambx     = Maille_i$lambx,
                 lamby     = Maille_i$lamby,
@@ -1257,6 +1257,38 @@ run_script1 <- function(
                 "Donnees SIM2 recuperees depuis data.gouv.fr : ",
                 nrow(climate_mi_df), " lignes."
               ))
+            } else if (yr_to > 2019) {
+              # L'API G-EAU a retourné des données mais ne couvre pas au-delà de 2019.
+              # Compléter avec data.gouv.fr pour les années 2020+.
+              yr_datagouv_from <- max(yr_from, 2020L)
+              cli::cli_alert_warning(paste0(
+                "API SAFRAN (G-EAU) limitee a 2019. Complementing avec data.gouv.fr ",
+                "pour la maille ", maille, " (", yr_datagouv_from, "-", yr_to, ")..."
+              ))
+              df_datagouv <- get_sim2_from_datagouv(
+                lambx     = Maille_i$lambx,
+                lamby     = Maille_i$lamby,
+                year_from = yr_datagouv_from,
+                year_to   = yr_to,
+                cache_dir = cache_sim2
+              )
+              if (nrow(df_datagouv) > 0) {
+                # Garder uniquement les colonnes communes pour le rbind
+                cols_communs <- intersect(names(climate_mi_df), names(df_datagouv))
+                climate_mi_df <- dplyr::bind_rows(
+                  climate_mi_df[, cols_communs],
+                  df_datagouv[, cols_communs]
+                )
+                cli::cli_alert_success(paste0(
+                  "Donnees SIM2 completes : ", nrow(climate_mi_df), " lignes (",
+                  yr_from, "-", yr_to, ")."
+                ))
+              } else {
+                cli::cli_alert_warning(paste0(
+                  "Impossible de recuperer data.gouv.fr pour ", yr_datagouv_from,
+                  "-", yr_to, " (maille ", maille, "). Simulation partielle."
+                ))
+              }
             }
           }
 
