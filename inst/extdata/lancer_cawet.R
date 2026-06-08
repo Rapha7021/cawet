@@ -4,7 +4,7 @@
 # ============================================================
 
 dossier_travail  <- "/home/shiff/Bureau/CAWET"   # dossier où seront copiés les données et résultats
-nom_ordonnanceur <- "Ordonnanceur_zone4.xlsx" # nom de ton fichier ordonnanceur
+nom_ordonnanceur <- "Ordonnanceur_zone4 - 2018-2025.xlsx" # nom de ton fichier ordonnanceur
 
 # ---------------------------------------------------------------
 #  MODE DEBUG RAPIDE : réutiliser un Charged_inputs déjà téléchargé
@@ -13,7 +13,7 @@ nom_ordonnanceur <- "Ordonnanceur_zone4.xlsx" # nom de ton fichier ordonnanceur
 #  ou laisser NULL pour lancer un run complet.
 # ---------------------------------------------------------------
 # Exemple :
-charged_inputs_existants <- NULL
+charged_inputs_existants <- "/home/shiff/Bureau/CAWET/Runs/Run_2026-05-22_102629/Charged_inputs"
 
 # Valeurs saisies via lancer_CAWET.bat (prioritaires sur les lignes ci-dessus)
 if (nzchar(Sys.getenv("CAWET_DOSSIER_TRAVAIL")))  dossier_travail  <- Sys.getenv("CAWET_DOSSIER_TRAVAIL")

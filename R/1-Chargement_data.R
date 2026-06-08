@@ -283,7 +283,7 @@ run_script1 <- function(
             ),
             error = function(e) {
               msg <- conditionMessage(e)
-              if (!grepl("502|503|Bad Gateway|Service Unavailable|404", msg)) stop(e)
+              if (!grepl("400|Bad Request|502|503|Bad Gateway|Service Unavailable|404", msg)) stop(e)
 
               # Fallback 1 : WFS BBOX (contourne les erreurs 502 du filtre CQL)
               cli::cli_alert_warning(
@@ -964,10 +964,11 @@ run_script1 <- function(
           sf::st_as_sf()
       }
 
-      parcelle_avec_maille_y_grouped_submail_extract <- parcelle_avec_maille_y_grouped[
-        sf::st_geometry_type(parcelle_avec_maille_y_grouped) %in%
-          c("POLYGON", "MULTIPOLYGON"),
-      ]
+      parcelle_avec_maille_y_grouped_submail_extract <- parcelle_avec_maille_y_grouped %>%
+        dplyr::filter(
+          sf::st_geometry_type(.) %in% c("POLYGON", "MULTIPOLYGON")
+        ) %>%
+        sf::st_cast("MULTIPOLYGON", warn = FALSE)
       sf::st_write(
         parcelle_avec_maille_y_grouped_submail_extract,
         paste0(
@@ -1151,10 +1152,11 @@ run_script1 <- function(
       if (Year == Scenario$Last_year_simulation[Scen_i]) {
         parcelle_avec_maille_grouped <- parcelle_avec_maille_grouped %>%
           dplyr::filter(!is.na(id_sous_maille))
-        parcelle_avec_maille_y_grouped_extract <- parcelle_avec_maille_grouped[
-          sf::st_geometry_type(parcelle_avec_maille_grouped) %in%
-            c("POLYGON", "MULTIPOLYGON"),
-        ]
+        parcelle_avec_maille_y_grouped_extract <- parcelle_avec_maille_grouped %>%
+          dplyr::filter(
+            sf::st_geometry_type(.) %in% c("POLYGON", "MULTIPOLYGON")
+          ) %>%
+          sf::st_cast("MULTIPOLYGON", warn = FALSE)
         sf::st_write(
           parcelle_avec_maille_y_grouped_extract,
           paste0(Input_run_path_Scen, "/Crops_all_RADIS_information.shp"),

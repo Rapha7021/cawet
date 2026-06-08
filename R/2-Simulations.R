@@ -720,6 +720,9 @@ run_script2 <- function(
     }
 
     #Territorial information
+    cli::cli_alert_info(
+      "Agrégation des résultats ({length(dir(Path_Run_results_scen_detail))} simulations) — ne pas interrompre..."
+    )
     Liste_dir <- dir(Path_Run_results_scen_detail)
     Liste_dir <- Liste_dir[which(
       str_detect(Liste_dir, ".csv") & !str_detect(Liste_dir, "Warning")
@@ -731,7 +734,11 @@ run_script2 <- function(
       file = Scenario$Pratique_irrigation_table_percentages[Scen_i]
     )
 
-    for (dir_outp in Liste_dir) {
+    # Pre-allocate list to avoid repeated bind_rows copies (O(n^2) memory)
+    data_list <- vector("list", length(Liste_dir))
+
+    for (idx in seq_along(Liste_dir)) {
+      dir_outp <- Liste_dir[idx]
       Cult <- unlist(str_split(dir_outp, '_'))[1]
       Irri_met <- substr(
         paste0(
@@ -789,12 +796,7 @@ run_script2 <- function(
             ETc_m3_irrmet = Surf_irrmet * ETc_adj / 1000
           )
 
-        if (dir_outp == dplyr::first(Liste_dir)) {
-          data_join <- data
-        }
-        if (dir_outp != dplyr::first(Liste_dir)) {
-          data_join <- data_join %>% bind_rows(data)
-        }
+        data_list[[idx]] <- data
       } else {
         #If non parametred crop
         message(
@@ -802,29 +804,13 @@ run_script2 <- function(
           Cult,
           " no reference of percentages in the territory"
         )
-        if (dir_outp == dplyr::first(Liste_dir)) {
-          data_join <- data.frame(
-            DatesR = NA,
-            Mois = NA,
-            An = NA,
-            Ks = NA,
-            ETc_adj = NA,
-            Dr = NA,
-            Ir = NA,
-            Surf = NA,
-            CODE_CU = NA,
-            Irrmet = NA,
-            Perc = NA,
-            Poly = NA,
-            Mail = NA,
-            ssMail = NA,
-            Surf_irrmet = NA,
-            Irr_m3_irrmet = NA,
-            ETc_m3_irrmet = NA
-          )
-        }
       }
     } #end daily aggregation data
+
+    # Single bind_rows from pre-allocated list — avoids O(n^2) memory copies
+    data_join <- bind_rows(data_list)
+    rm(data_list)
+    gc()
 
     #joining data and mensualisation
     Poly_info_plusCCday <- data_join %>%
